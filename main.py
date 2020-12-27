@@ -21,6 +21,8 @@ df.groupby('Time')[labels]
 #y = df['Percentage of Households']
 
 
+
+
 # Bar Chart
 
 locations = ['DNK', 'DEU', 'ISL', 'JPN', 'FRA', 'HUN',
