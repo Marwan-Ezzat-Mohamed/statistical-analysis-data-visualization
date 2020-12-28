@@ -5,6 +5,7 @@ from statistics import mean
 from sklearn.linear_model import LinearRegression
 
 filename = 'Sales.csv'
+
 #Titles for axes
 xTitle = 'Year'
 yTitle = 'Unit Sales(in millions)'
@@ -74,3 +75,7 @@ y = df[yTitle]
 #plt.legend(loc=4)
 
 plt.show()
+
+
+
+
