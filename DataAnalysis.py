@@ -11,19 +11,22 @@ df = pd.read_csv('Sales.csv')
 x = df['Year']
 y = df['Unit Sales(in millions)']
 
+#Titles for axes
+xTitle = 'Year'
+yTitle = 'Unit Sales(in millions)'
+
 #Bar chart
-#plt.xlabel('Year', fontsize=16)
-#plt.ylabel('Unit Sales (in millions)', fontsize=16)
+#plt.xlabel(xTitle, fontsize=16)
+#plt.ylabel(yTitle, fontsize=16)
 #plt.bar(x, y)
 
 #Pie chart
-#plt.title("Unit sales of the Apple iPhone worldwide from 2010 to 2018(in millions)", fontsize = 10)
 #plt.pie(y, labels=x, radius=1.0,autopct='%0.01f%%', shadow=False, explode=(0.1,0,0,0,0,0.1,0,0,0))
 #plt.axis('equal') #Assures it's a circle
 
 #Scatter Graph
-#plt.xlabel('Year', fontsize=18)
-#plt.ylabel('Unit Sales(in millions)', fontsize=16)
+#plt.xlabel(xTitle, fontsize=18)
+#plt.ylabel(yTitle, fontsize=16)
 #plt.plot(x, y, 'o')
 
 #Regression
@@ -40,9 +43,8 @@ y = df['Unit Sales(in millions)']
 
 #Histogram
 #plt.hist(x, "auto", ec = "black")
-#plt.xlabel('Year', fontsize=18)
-#plt.ylabel('Unit Sales(in millions)', fontsize=16)
-#plt.title('Unit sales of the Apple iPhone worldwide from 2010 to 2018(in millions)', fontsize = 10)
+#plt.xlabel(xTitle, fontsize=18)
+#plt.ylabel(yTitle, fontsize=16)
 
 #Boxplot
 #plt.boxplot(y , vert = False)
