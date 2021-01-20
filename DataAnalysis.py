@@ -92,9 +92,9 @@ PieButton.place(x=130,y=120)
 
 
 def HistogramGraph():
-    plt.hist(y, bins=int(sqrtDataSetSize), ec="black")
-    plt.xlabel(xTitle, fontsize=18)
-    plt.ylabel(yTitle, fontsize=16)
+    plt.hist(y, ec="black")
+    plt.xlabel(yTitle, fontsize=18)
+   # plt.ylabel(yTitle, fontsize=16)
     plt.show()
 
 
