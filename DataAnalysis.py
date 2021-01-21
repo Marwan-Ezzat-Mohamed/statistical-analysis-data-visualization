@@ -174,8 +174,8 @@ MedianValueLabel =Label(root,textvariable=var2,bg='#051626',fg='white', font=fon
 MedianValueLabel.place(x=150,y=500)
 
 def CalculateMode():
-    Mode = y.mode()[7]
-    var3.set(round(Mode, 2))
+    Mode = y.mode()
+    var3.set(Mode[0])
 
 var3=StringVar()
 ModeLabel = Label(root,width=100, highlightthickness = 0, bd = 0,bg='#051626',image=ModeImage,activebackground='#051626')
@@ -183,6 +183,7 @@ ModeLabel.place(x=240,y=550)
 CalculateMode()
 ModeValueLabel =Label(root,textvariable=var3,bg='#051626',fg='white',font=fontValues ) 
 ModeValueLabel.place(x=256,y=500)
+
 root.mainloop()
 
 
