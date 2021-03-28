@@ -9,12 +9,15 @@ from PIL import ImageTk,Image
 filename = 'Sales.csv'
 import tkinter.font as tkFont
 
-# Titles for axes
-xTitle = 'Year'
-yTitle = 'Unit Sales(in millions)'
+
 
 plt.style.use('bmh')
 df = pd.read_csv(filename)
+
+# Titles for axes
+
+xTitle = df.columns[0]
+yTitle = df.columns[1]
 
 # All Brands
 x = df[xTitle]
@@ -78,8 +81,9 @@ BarButton.place(x=10,y=120)
 
 
 def PieChartGraph():
-    plt.pie(y, labels=x, radius=1.0, autopct='%0.01f%%',shadow=False, explode=(0.1, 0, 0, 0, 0, 0.1, 0, 0, 0))     
+    plt.pie(y, labels=x, radius=5, autopct='%1.1f%%',pctdistance=0.8,labeldistance=1.07,startangle=40)     
     plt.axis('equal')  # Assures it's a circle
+    plt.aspect=1
     plt.show()
 
 
@@ -174,8 +178,8 @@ MedianValueLabel =Label(root,textvariable=var2,bg='#051626',fg='white', font=fon
 MedianValueLabel.place(x=150,y=500)
 
 def CalculateMode():
-    Mode = y.mode()[7]
-    var3.set(round(Mode, 2))
+    Mode = y.mode()
+    var3.set(Mode[0])
 
 var3=StringVar()
 ModeLabel = Label(root,width=100, highlightthickness = 0, bd = 0,bg='#051626',image=ModeImage,activebackground='#051626')
